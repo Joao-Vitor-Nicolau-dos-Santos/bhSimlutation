@@ -4,7 +4,7 @@ import random
 
 # Inicialização
 pygame.init()
-WIDTH, HEIGHT = 800, 600
+WIDTH, HEIGHT = 1080, 720
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Simulação Simplificada de Buraco Negro")
 clock = pygame.time.Clock()
@@ -12,7 +12,7 @@ clock = pygame.time.Clock()
 # Constantes
 G = 0.5          # Constante gravitacional "ajustada"
 BLACK_HOLE_MASS = 5000
-EVENT_HORIZON = 30  # Raio do horizonte de eventos
+EVENT_HORIZON = 50  # Raio do horizonte de eventos
 
 # Classe para partículas
 class Particle:
@@ -21,7 +21,7 @@ class Particle:
         self.y = y
         self.vx = vx
         self.vy = vy
-        self.radius = 3
+        self.radius = random.randint(1,4)
         self.alive = True
 
     def update(self, bh_x, bh_y):
